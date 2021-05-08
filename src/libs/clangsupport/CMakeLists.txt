@@ -1,6 +1,6 @@
 set(CLANG_VERSION ${LLVM_VERSION_MAJOR}.${LLVM_VERSION_MINOR}.${LLVM_VERSION_PATCH})
 
-add_qtc_library(ClangSupport
+add_qtc_library(ClangSupport STATIC
   DEPENDS Threads::Threads
   PUBLIC_DEPENDS Utils Sqlite Qt5::Core Qt5::Network
   PUBLIC_DEFINES
@@ -143,6 +143,6 @@ add_qtc_library(ClangSupport
     writemessageblock.cpp writemessageblock.h
 )
 
-if (NOT TARGET libclang)
+if (NOT TARGET libclang_static)
   return()
 endif()

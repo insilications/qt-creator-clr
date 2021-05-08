@@ -251,9 +251,9 @@ string(REPLACE "$$dependencyList" "\"Dependencies\" : []" plugin_json_in ${plugi
 file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/CppTools.json" ${plugin_json_in})
 
 extend_qtc_test(unittest
-  CONDITION TARGET libclang
+  CONDITION TARGET libclang_static
   INCLUDES "${CLANG_INCLUDE_DIRS}"
-  DEPENDS libclang
+  DEPENDS libclang_static
   SOURCES
     activationsequencecontextprocessor-test.cpp
     activationsequenceprocessor-test.cpp

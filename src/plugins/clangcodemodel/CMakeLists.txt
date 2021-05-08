@@ -1,5 +1,5 @@
 add_qtc_plugin(ClangCodeModel
-  CONDITION TARGET libclang
+  CONDITION TARGET libclang_static
   DEPENDS ClangSupport CPlusPlus
   PLUGIN_DEPENDS Core CppTools LanguageClient TextEditor
   PLUGIN_TEST_DEPENDS CppEditor QmakeProjectManager
