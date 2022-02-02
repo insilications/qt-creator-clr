@@ -2,9 +2,9 @@
 #       -- if really needed that is.
 # TODO: Make Qt5::Gui optional -- if really needed that is.
 
-add_qtc_library(CPlusPlus
+add_qtc_library(CPlusPlus STATIC
   DEPENDS Utils Qt5::Concurrent
-  DEFINES CPLUSPLUS_BUILD_LIB
+  DEFINES CPLUSPLUS_BUILD_STATIC_LIB
   PUBLIC_DEPENDS 3rd_cplusplus Qt5::Gui
   SOURCES
     ASTParent.cpp ASTParent.h

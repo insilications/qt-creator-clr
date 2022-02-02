@@ -4,7 +4,7 @@ if(WITH_TESTS)
 endif()
 
 add_qtc_plugin(ClangCodeModel
-  CONDITION TARGET libclang
+  CONDITION TARGET libclang_static
   DEPENDS ClangSupport CPlusPlus
   PLUGIN_DEPENDS Core CppEditor LanguageClient ${TEST_LINK_DEPENDS} TextEditor
   PLUGIN_TEST_DEPENDS QmakeProjectManager

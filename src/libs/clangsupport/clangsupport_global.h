@@ -32,11 +32,11 @@
 #include <utils/smallstringfwd.h>
 
 #if defined(CLANGSUPPORT_BUILD_LIB)
-#  define CLANGSUPPORT_EXPORT Q_DECL_EXPORT
+#  define CLANGSUPPORT_EXPORT
 #elif defined(CLANGSUPPORT_BUILD_STATIC_LIB)
 #  define CLANGSUPPORT_EXPORT
 #else
-#  define CLANGSUPPORT_EXPORT Q_DECL_IMPORT
+#  define CLANGSUPPORT_EXPORT
 #endif
 
 #ifdef Q_CC_GNU

@@ -1,4 +1,8 @@
-if (TARGET libclang)
+#if (TARGET libclang)
+  #set(HAVE_LIBCLANG ON)
+#endif()
+
+if (TARGET libclang_static)
   set(HAVE_LIBCLANG ON)
 endif()
 
@@ -172,7 +176,7 @@ extend_qtc_test(unittest
   CONDITION HAVE_LIBCLANG
   INCLUDES "${CLANG_INCLUDE_DIRS}"
   DEFINES CLANG_UNIT_TESTS
-  DEPENDS libclang
+  DEPENDS libclang_static
   SOURCES
     activationsequencecontextprocessor-test.cpp
     activationsequenceprocessor-test.cpp
