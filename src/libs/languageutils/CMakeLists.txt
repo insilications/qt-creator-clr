@@ -1,4 +1,5 @@
-add_qtc_library(LanguageUtils
+add_qtc_library(LanguageUtils STATIC
+  DEFINES LANGUAGEUTILS_BUILD_STATIC_LIB
   PUBLIC_DEPENDS Qt5::Core
   SOURCES
     componentversion.cpp componentversion.h

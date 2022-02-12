@@ -1,13 +1,13 @@
 set(CLANG_VERSION ${LLVM_VERSION_MAJOR}.${LLVM_VERSION_MINOR}.${LLVM_VERSION_PATCH})
 
-add_qtc_library(ClangSupport
+add_qtc_library(ClangSupport STATIC
   DEPENDS Threads::Threads
   PUBLIC_DEPENDS Utils Qt5::Core Qt5::Network
   PUBLIC_DEFINES
     CLANG_VERSION="${CLANG_VERSION}"
     CLANG_INCLUDE_DIR="${LLVM_LIBRARY_DIR}/clang/${CLANG_VERSION}/include"
     CLANG_BINDIR="${LLVM_TOOLS_BINARY_DIR}"
-  DEFINES CLANGSUPPORT_BUILD_LIB
+  DEFINES CLANGSUPPORT_BUILD_STATIC_LIB
   PUBLIC_INCLUDES
     "${CMAKE_CURRENT_LIST_DIR}"
   SOURCES
@@ -68,6 +68,6 @@ add_qtc_library(ClangSupport
     writemessageblock.cpp writemessageblock.h
 )
 
-if (NOT TARGET libclang)
+if (NOT TARGET libclang_static)
   return()
 endif()

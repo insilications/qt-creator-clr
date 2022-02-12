@@ -1,5 +1,5 @@
 add_qtc_library(clangbackend_lib STATIC
-  DEPENDS libclang
+  DEPENDS libclang_static
   PUBLIC_DEPENDS
     Qt5::Widgets # FIXME: change the way to get the gui pch to linkto
   DEFINES

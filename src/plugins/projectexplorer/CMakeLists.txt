@@ -189,7 +189,10 @@ extend_qtc_plugin(ProjectExplorer
   DEFINES "PROJECT_USER_FILE_EXTENSION=${PROJECT_USER_FILE_EXTENSION}"
 )
 
-if (TARGET libclang)
+#if (TARGET libclang)
+  #set(CLANG_BINDIR "$<TARGET_FILE_DIR:libclang>")
+#endif()
+if (TARGET libclang_static)
   set(CLANG_BINDIR "$<TARGET_FILE_DIR:libclang>")
 endif()
 extend_qtc_plugin(ProjectExplorer
