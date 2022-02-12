@@ -3865,8 +3865,8 @@ static QColor calcBlendColor(const QColor &baseColor, int level, int count)
     QColor color90;
 
     if (baseColor.value() > 128) {
-        const int f90 = 15;
-        const int f80 = 30;
+        const int f90 = 5;
+        const int f80 = 20;
         color80.setRgb(qMax(0, baseColor.red() - f80),
                        qMax(0, baseColor.green() - f80),
                        qMax(0, baseColor.blue() - f80));
@@ -3874,8 +3874,8 @@ static QColor calcBlendColor(const QColor &baseColor, int level, int count)
                        qMax(0, baseColor.green() - f90),
                        qMax(0, baseColor.blue() - f90));
     } else {
-        const int f90 = 20;
-        const int f80 = 40;
+        const int f90 = 5;
+        const int f80 = 30;
         color80.setRgb(qMin(255, baseColor.red() + f80),
                        qMin(255, baseColor.green() + f80),
                        qMin(255, baseColor.blue() + f80));
